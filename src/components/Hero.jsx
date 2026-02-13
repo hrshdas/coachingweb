@@ -85,7 +85,7 @@ const Hero = () => {
             <div className="absolute top-20 right-10 w-72 h-72 bg-primary/15 rounded-full blur-[120px]"></div>
             <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary-light/15 rounded-full blur-[120px]"></div>
 
-            <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-32 overflow-x-hidden">
+            <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-16 md:pt-28 md:pb-32 overflow-x-hidden">
                 <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
                     {/* Left Content */}
                     <div className="space-y-8 z-10">

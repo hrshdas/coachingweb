@@ -1,3 +1,6 @@
+import ScrollReveal from './ScrollReveal';
+import CountUp from './CountUp';
+
 const ResultsSection = () => {
     const results = [
         {
@@ -42,20 +45,47 @@ const ResultsSection = () => {
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <ScrollReveal className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Achievements</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Celebrating the success of our students who made their dreams come true
                     </p>
-                </div>
+                </ScrollReveal>
+
+                {/* Stats Row */}
+                <ScrollReveal
+                    variant="fade"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 border-y border-gray-100 py-12 bg-white/50 backdrop-blur-sm"
+                >
+                    <div className="text-center">
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                            <CountUp end={500} suffix="+" />
+                        </div>
+                        <div className="text-gray-600 font-medium">Top Rankers</div>
+                    </div>
+                    <div className="text-center">
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                            <CountUp end={15} suffix="+" />
+                        </div>
+                        <div className="text-gray-600 font-medium">Years Legacy</div>
+                    </div>
+                    <div className="text-center">
+                        <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                            <CountUp end={98} suffix="%" />
+                        </div>
+                        <div className="text-gray-600 font-medium">Success Rate</div>
+                    </div>
+                </ScrollReveal>
 
                 {/* Results Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {results.map((result, index) => (
-                        <div
+                        <ScrollReveal
                             key={index}
+                            variant="slideUp"
+                            delay={index * 0.1}
                             className="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
                         >
                             {/* Gradient Overlay */}
@@ -64,10 +94,8 @@ const ResultsSection = () => {
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center mb-4">
                                     <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                                         </svg>
                                     </div>
                                 </div>
@@ -87,7 +115,7 @@ const ResultsSection = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>

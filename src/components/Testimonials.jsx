@@ -1,3 +1,5 @@
+import ScrollReveal from './ScrollReveal';
+
 const Testimonials = () => {
     const testimonials = [
         {
@@ -87,17 +89,17 @@ const Testimonials = () => {
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <ScrollReveal className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Students Say</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Hear from students and parents who achieved their dreams with us
                     </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Dual Row Carousel */}
-                <div className="space-y-6">
+                <ScrollReveal variant="fade" delay={0.2} className="space-y-6">
                     {/* Row 1 - Scrolling Left */}
                     <div className="relative">
                         <div className="overflow-hidden">
@@ -119,9 +121,9 @@ const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </ScrollReveal>
             </div>
-        </section>
+        </section >
     );
 };
 

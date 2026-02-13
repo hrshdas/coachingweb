@@ -4,6 +4,7 @@ import logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,11 +24,11 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 py-2">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center">
-                        <img src={logo} alt="Gravity Classes" className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+                    <Link to="/" className="flex items-center z-50 relative">
+                        <img src={logo} alt="Gravity Classes" className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" />
                     </Link>
 
-                    {/* Navigation Links */}
+                    {/* Desktop Navigation Links */}
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             to="/#centers"
@@ -150,8 +151,8 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Location Icon and CTA Button */}
-                    <div className="flex items-center space-x-4">
+                    {/* Location Icon and CTA Button (Desktop) */}
+                    <div className="hidden md:flex items-center space-x-4">
                         <a
                             href="https://www.google.com/maps/place/Gravity+Classes%7C+IIT+NEET+Coaching+in+Delhi+%7CJanakpuri+Delhi/@28.625426,77.067901,15z/data=!4m6!3m5!1s0x390d0533ea7f65a5:0x580f4b837803d464!8m2!3d28.6254256!4d77.0679005!16s%2Fg%2F11sfr70h3_?hl=en&entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"
@@ -169,6 +170,63 @@ const Navbar = () => {
                             Enquire Now
                         </button>
                     </div>
+
+                    {/* Mobile Hamburger Button */}
+                    <button
+                        className="md:hidden z-50 p-2 text-gray-700 focus:outline-none"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <div className="w-6 h-6 flex flex-col justify-around relative">
+                            <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+                            <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+                            <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`} />
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div
+                className={`fixed inset-0 bg-white/95 backdrop-blur-lg z-40 transition-all duration-300 md:hidden ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+                    }`}
+            >
+                <div className="flex flex-col items-center justify-center h-full space-y-8 text-lg font-medium">
+                    <Link
+                        to="/#centers"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-gray-800 hover:text-accent transition-colors"
+                    >
+                        Centers
+                    </Link>
+
+                    <div className="flex flex-col items-center space-y-4">
+                        <span className="text-gray-400 text-sm uppercase tracking-wider">Courses</span>
+                        <a href="/courses/iit-jee" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">IIT-JEE</a>
+                        <a href="/courses/neet" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">NEET</a>
+                        <a href="/courses/foundation" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">Foundation</a>
+                        <a href="/courses/cuet" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">CUET</a>
+                    </div>
+
+                    <Link
+                        to="/#results"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-gray-800 hover:text-accent transition-colors"
+                    >
+                        Results
+                    </Link>
+
+                    <Link
+                        to="/scholarship"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-gray-800 hover:text-accent transition-colors"
+                    >
+                        Scholarship
+                    </Link>
+
+                    <button className="bg-accent hover:bg-accent-dark text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-accent/30">
+                        Enquire Now
+                    </button>
                 </div>
             </div>
         </nav>

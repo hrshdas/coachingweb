@@ -1,8 +1,6 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import ScrollReveal from './ScrollReveal';
 
 const WhyChooseUs = () => {
-    const [headerRef, headerVisible] = useScrollAnimation(0.2);
-    const [cardsRef, cardsVisible] = useScrollAnimation(0.1);
     const reasons = [
         {
             icon: (
@@ -67,21 +65,23 @@ const WhyChooseUs = () => {
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <div ref={headerRef} className={`text-center mb-16 animate-on-scroll fade-in ${headerVisible ? 'visible' : ''}`}>
+                <ScrollReveal className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Choose Us</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         We provide everything you need to excel in your competitive exams
                     </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Reasons Grid */}
-                <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {reasons.map((reason, index) => (
-                        <div
+                        <ScrollReveal
                             key={index}
-                            className={`group bg-white/80 backdrop-blur-xl border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll scale-in stagger-${(index % 3) + 1} ${cardsVisible ? 'visible' : ''}`}
+                            variant="scale"
+                            delay={index * 0.1}
+                            className={`group bg-white/80 backdrop-blur-xl border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
                         >
                             <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
                                 {reason.icon}
@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
                             <p className="text-gray-600 leading-relaxed">
                                 {reason.description}
                             </p>
-                        </div>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>

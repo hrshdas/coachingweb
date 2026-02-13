@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import ScrollReveal from './ScrollReveal';
 
 const ProgramsSection = () => {
-    const [headerRef, headerVisible] = useScrollAnimation(0.2);
-    const [cardsRef, cardsVisible] = useScrollAnimation(0.1);
     const programs = [
         {
             title: 'IIT-JEE',
@@ -36,7 +34,7 @@ const ProgramsSection = () => {
     ];
 
     return (
-        <section id="programs" className="relative py-28 bg-blue-50 overflow-hidden">
+        <section id="programs" className="relative py-16 md:py-28 bg-blue-50 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -51,21 +49,23 @@ const ProgramsSection = () => {
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <div ref={headerRef} className={`text-center mb-16 animate-on-scroll fade-in ${headerVisible ? 'visible' : ''}`}>
+                <ScrollReveal className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Programs</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Choose the right program tailored to your goals and aspirations
                     </p>
-                </div>
+                </ScrollReveal>
 
                 {/* Program Cards */}
-                <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {programs.map((program, index) => (
-                        <div
+                        <ScrollReveal
                             key={index}
-                            className={`group bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll slide-up stagger-${index + 1} ${cardsVisible ? 'visible' : ''}`}
+                            variant="slideUp"
+                            delay={index * 0.1}
+                            className={`group bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
                         >
                             {/* Course Image */}
                             <div className="relative h-48 overflow-hidden">
@@ -111,7 +111,7 @@ const ProgramsSection = () => {
                                     View Details
                                 </Link>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>

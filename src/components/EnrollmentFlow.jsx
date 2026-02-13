@@ -215,12 +215,12 @@ const EnrollmentFlow = () => {
                                 Select your class
                             </h2>
 
-                            <div className="flex justify-center gap-4 mb-8">
+                            <div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
                                 {classes.map((classValue) => (
                                     <button
                                         key={classValue}
                                         onClick={() => handleClassSelect(classValue)}
-                                        className={`px-12 py-4 rounded-xl text-lg font-medium transition-all duration-300 ${formData.class === classValue
+                                        className={`w-full md:w-auto px-8 py-4 rounded-xl text-lg font-medium transition-all duration-300 ${formData.class === classValue
                                             ? 'bg-cyan-400 text-white scale-105'
                                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                             }`}
