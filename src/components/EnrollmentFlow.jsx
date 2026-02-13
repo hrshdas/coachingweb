@@ -153,7 +153,7 @@ const EnrollmentFlow = () => {
     };
 
     return (
-        <section className="relative py-16 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+        <section className="relative py-12 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -164,7 +164,7 @@ const EnrollmentFlow = () => {
 
             <div className="relative max-w-4xl mx-auto px-6">
                 {/* Progress Bar */}
-                <div className="flex justify-center items-center gap-3 mb-12">
+                <div className="flex justify-center items-center gap-3 mb-8">
                     {[1, 2, 3, 4, 5].map((step) => (
                         <div
                             key={step}
@@ -183,9 +183,12 @@ const EnrollmentFlow = () => {
                     {/* Step 1: Goal Selection */}
                     {currentStep === 1 && (
                         <div className="text-center">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                                Select your goal
+                            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-display">
+                                Let's Pinpoint Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Dream</span>
                             </h2>
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-600 mb-2">
+                                Select your goal
+                            </h3>
                             <p className="text-2xl md:text-3xl text-cyan-400 font-semibold mb-12">
                                 to explore our courses
                             </p>

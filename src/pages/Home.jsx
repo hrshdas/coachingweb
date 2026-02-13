@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import EnrollmentFlow from '../components/EnrollmentFlow';
-import StatsSection from '../components/StatsSection';
 import ProgramsSection from '../components/ProgramsSection';
 import ResultsSection from '../components/ResultsSection';
 import AboutSection from '../components/AboutSection';
@@ -17,7 +16,6 @@ const Home = () => {
             <Navbar />
             <Hero />
             <EnrollmentFlow />
-            <StatsSection />
             <ProgramsSection />
             <ResultsSection />
             <AboutSection />

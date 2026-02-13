@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import CountUp from './CountUp';
 
 const Hero = () => {
     const [cards, setCards] = useState([
@@ -72,23 +73,15 @@ const Hero = () => {
     const dimStep = 0.12; // Brightness reduction per card
 
     return (
-        <section className="relative min-h-screen bg-blue-50 overflow-hidden overflow-x-hidden">
-            {/* Animated Background Pattern */}
-            <div className="absolute inset-0 opacity-40">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `radial-gradient(circle at 2px 2px, rgba(30, 64, 175, 0.1) 1px, transparent 0)`,
-                    backgroundSize: '40px 40px'
-                }}></div>
-            </div>
+        <section className="relative min-h-screen overflow-hidden overflow-x-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
+            {/* Background Decor */}
+            <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full blur-3xl opacity-50"></div>
+            <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl opacity-50"></div>
 
-            {/* Geometric Accent Elements */}
-            <div className="absolute top-20 right-10 w-72 h-72 bg-primary/15 rounded-full blur-[120px]"></div>
-            <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary-light/15 rounded-full blur-[120px]"></div>
-
-            <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-16 md:pt-28 md:pb-32 overflow-x-hidden">
-                <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
+            <div className="relative max-w-7xl mx-auto px-6 pt-16 pb-12 md:pt-20 md:pb-20 overflow-x-hidden">
+                <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-6rem)]">
                     {/* Left Content */}
-                    <div className="space-y-8 z-10">
+                    <div className="space-y-6 z-10">
                         {/* Badge */}
                         <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2">
                             <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
@@ -105,7 +98,7 @@ const Hero = () => {
                         </h1>
 
                         {/* Subheading */}
-                        <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
+                        <p className="text-xl text-gray-700 leading-normal max-w-xl">
                             <span className="inline-block word-fade-in word-delay-3">Elite coaching for IIT-JEE, NEET, and Foundation.</span>
                             <br />
                             <span className="inline-block word-fade-in word-delay-4">Where ambition meets excellence, and dreams transform into reality.</span>
@@ -136,18 +129,26 @@ const Hero = () => {
                             </button>
                         </div>
 
+
+
                         {/* Stats Row */}
                         <div className="flex flex-wrap gap-8 pt-8 border-t border-gray-200">
                             <div>
-                                <div className="text-3xl font-bold text-primary">500+</div>
+                                <div className="text-3xl font-bold text-primary">
+                                    <CountUp end={500} suffix="+" />
+                                </div>
                                 <div className="text-gray-600 text-sm">Top Rankers</div>
                             </div>
                             <div>
-                                <div className="text-3xl font-bold text-primary">15+</div>
+                                <div className="text-3xl font-bold text-primary">
+                                    <CountUp end={15} suffix="+" />
+                                </div>
                                 <div className="text-gray-600 text-sm">Years Legacy</div>
                             </div>
                             <div>
-                                <div className="text-3xl font-bold text-primary">98%</div>
+                                <div className="text-3xl font-bold text-primary">
+                                    <CountUp end={98} suffix="%" />
+                                </div>
                                 <div className="text-gray-600 text-sm">Success Rate</div>
                             </div>
                         </div>

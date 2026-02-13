@@ -1,6 +1,6 @@
 const CTASection = () => {
     return (
-        <section className="relative py-24 bg-gradient-to-br from-primary via-primary-light to-primary overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-br from-primary via-primary-light to-primary overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0" style={{
@@ -16,10 +16,10 @@ const CTASection = () => {
             </div>
 
             <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     Start Your Journey to <span className="text-accent">Success</span> Today
                 </h2>
-                <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                     Join thousands of successful students who achieved their dreams with our expert guidance
                 </p>
 

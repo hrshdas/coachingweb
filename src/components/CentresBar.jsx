@@ -23,7 +23,7 @@ const CentresBar = () => {
     ];
 
     return (
-        <section id="centers" className="bg-[#1e3a8a] py-5">
+        <section id="centers" className="bg-[#1e3a8a] py-4">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col lg:flex-row lg:divide-x lg:divide-white/30">
                     {centres.map((centre) => (

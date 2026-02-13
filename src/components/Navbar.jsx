@@ -17,7 +17,7 @@ const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? 'bg-white/90 backdrop-blur-md shadow-md'
+                ? 'bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20'
                 : 'bg-transparent'
                 }`}
         >
@@ -25,11 +25,11 @@ const Navbar = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center z-50 relative">
-                        <img src={logo} alt="Gravity Classes" className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+                        <img src={logo} alt="Gravity Classes" className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105" />
                     </Link>
 
                     {/* Desktop Navigation Links */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-16">
                         <Link
                             to="/#centers"
                             className="transition-colors font-medium text-gray-700 hover:text-primary"
@@ -152,7 +152,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Location Icon and CTA Button (Desktop) */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className="hidden md:flex items-center space-x-8">
                         <a
                             href="https://www.google.com/maps/place/Gravity+Classes%7C+IIT+NEET+Coaching+in+Delhi+%7CJanakpuri+Delhi/@28.625426,77.067901,15z/data=!4m6!3m5!1s0x390d0533ea7f65a5:0x580f4b837803d464!8m2!3d28.6254256!4d77.0679005!16s%2Fg%2F11sfr70h3_?hl=en&entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"
@@ -166,7 +166,7 @@ const Navbar = () => {
                             </svg>
                         </a>
 
-                        <button className="bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
+                        <button className="bg-accent hover:bg-accent-dark text-white px-8 py-3.5 rounded-xl font-bold tracking-wide transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
                             Enquire Now
                         </button>
                     </div>

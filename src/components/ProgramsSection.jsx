@@ -34,7 +34,7 @@ const ProgramsSection = () => {
     ];
 
     return (
-        <section id="programs" className="relative py-16 md:py-28 bg-blue-50 overflow-hidden">
+        <section id="programs" className="relative py-12 md:py-20 bg-blue-50 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -49,7 +49,7 @@ const ProgramsSection = () => {
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <ScrollReveal className="text-center mb-16">
+                <ScrollReveal className="text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Programs</span>
                     </h2>
@@ -59,7 +59,7 @@ const ProgramsSection = () => {
                 </ScrollReveal>
 
                 {/* Program Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {programs.map((program, index) => (
                         <ScrollReveal
                             key={index}
@@ -68,7 +68,7 @@ const ProgramsSection = () => {
                             className={`group bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
                         >
                             {/* Course Image */}
-                            <div className="relative h-48 overflow-hidden">
+                            <div className="relative h-40 overflow-hidden">
                                 <img
                                     src={program.image}
                                     alt={program.title}
@@ -77,15 +77,15 @@ const ProgramsSection = () => {
                             </div>
 
                             {/* Card Content */}
-                            <div className="p-6">
-                                <h3 className="text-2xl font-bold text-primary mb-3 text-center">
+                            <div className="p-5">
+                                <h3 className="text-xl font-bold text-primary mb-2 text-center">
                                     {program.title}
                                 </h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed text-center text-sm">
+                                <p className="text-gray-600 mb-4 leading-normal text-center text-sm">
                                     {program.description}
                                 </p>
 
-                                <ul className="space-y-2 mb-6">
+                                <ul className="space-y-1.5 mb-5">
                                     {program.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-center text-gray-700 text-sm">
                                             <svg
@@ -106,7 +106,7 @@ const ProgramsSection = () => {
 
                                 <Link
                                     to={`/courses/${program.slug}`}
-                                    className="block w-full bg-accent hover:bg-accent-dark text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 text-center"
+                                    className="block w-full bg-accent hover:bg-accent-dark text-white py-2.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 text-center text-sm"
                                 >
                                     View Details
                                 </Link>

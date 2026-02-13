@@ -74,7 +74,7 @@ const Testimonials = () => {
     );
 
     return (
-        <section className="relative py-28 bg-blue-50 overflow-hidden">
+        <section className="relative py-20 bg-blue-50 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -89,7 +89,7 @@ const Testimonials = () => {
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
-                <ScrollReveal className="text-center mb-16">
+                <ScrollReveal className="text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Students Say</span>
                     </h2>
