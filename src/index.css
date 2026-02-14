@@ -19,6 +19,11 @@
   scroll-behavior: smooth;
 }
 
+html {
+  font-size: 93.75%;
+  /* approx 15px */
+}
+
 body {
   font-family: 'Outfit', system-ui, sans-serif;
   background-color: #FAFAFA;
@@ -27,6 +32,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em;
 }
 
 h1,

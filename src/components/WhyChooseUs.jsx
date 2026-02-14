@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
                 {/* Section Header */}
                 <ScrollReveal className="text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-outfit">
-                        Do <span className="text-accent">More</span> with Gravity Classes
+                        Do <span className="text-blue-600">More</span> with Gravity Classes
                     </h2>
                     <p className="text-gray-500 max-w-2xl mx-auto text-lg">
                         Access exclusive guides, preparation tips, and practice resources for free

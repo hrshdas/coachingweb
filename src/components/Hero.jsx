@@ -89,7 +89,7 @@ const Hero = () => {
                         </div>
 
                         {/* Main Headline */}
-                        <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+                        <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight">
                             <span className="text-primary word-fade-in word-delay-1">We Shape</span>
                             <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-accent gradient-animate word-fade-in word-delay-2">
