@@ -24,8 +24,12 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 py-2">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center z-50 relative">
-                        <img src={logo} alt="Gravity Classes" className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105" />
+                    <Link to="/" className="flex items-center gap-3 z-50 relative group">
+                        <img src={logo} alt="Gravity Classes" className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+                        <div className="hidden md:flex flex-col">
+                            <span className="text-accent font-medium text-sm md:text-base leading-none italic -mb-1">Ananya's</span>
+                            <span className="text-primary font-bold text-xl md:text-2xl leading-tight">Gravity Classes</span>
+                        </div>
                     </Link>
 
                     {/* Desktop Navigation Links */}
