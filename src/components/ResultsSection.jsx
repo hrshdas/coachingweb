@@ -47,7 +47,7 @@ const ResultsSection = () => {
                 {/* Section Header */}
                 <ScrollReveal className="text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Achievements</span>
+                        Our <span className="text-black">Achievements</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Celebrating the success of our students who made their dreams come true

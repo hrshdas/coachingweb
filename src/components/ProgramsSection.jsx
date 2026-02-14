@@ -51,7 +51,7 @@ const ProgramsSection = () => {
                 {/* Section Header */}
                 <ScrollReveal className="text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Programs</span>
+                        Our <span className="text-black">Programs</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Choose the right program tailored to your goals and aspirations

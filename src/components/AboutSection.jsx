@@ -22,7 +22,7 @@ const AboutSection = () => {
                 {/* Section Header */}
                 <div ref={headerRef} className={`text-center mb-8 animate-on-scroll fade-in ${headerVisible ? 'visible' : ''}`}>
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Us</span>
+                        About <span className="text-black">Us</span>
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-light mx-auto mb-8"></div>
                 </div>

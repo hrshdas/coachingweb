@@ -184,7 +184,7 @@ const EnrollmentFlow = () => {
                     {currentStep === 1 && (
                         <div className="text-center">
                             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-display">
-                                Let's Pinpoint Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Dream</span>
+                                Let's Pinpoint Your <span className="text-blue-600">Dream</span>
                             </h2>
                             <h3 className="text-2xl md:text-3xl font-bold text-gray-600 mb-2">
                                 Select your goal

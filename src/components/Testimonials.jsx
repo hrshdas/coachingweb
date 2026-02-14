@@ -91,7 +91,7 @@ const Testimonials = () => {
                 {/* Section Header */}
                 <ScrollReveal className="text-center mb-10">
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-                        What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Students Say</span>
+                        What Our <span className="text-black">Students Say</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Hear from students and parents who achieved their dreams with us
