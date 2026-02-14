@@ -74,7 +74,7 @@ const Testimonials = () => {
     );
 
     return (
-        <section className="relative py-20 bg-blue-50 overflow-hidden">
+        <section id="testimonials" className="relative py-20 bg-blue-50 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -93,7 +93,7 @@ const Testimonials = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         What Our <span className="text-black">Students Say</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-500 max-w-2xl mx-auto">
                         Hear from students and parents who achieved their dreams with us
                     </p>
                 </ScrollReveal>

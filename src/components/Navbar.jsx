@@ -33,12 +33,12 @@ const Navbar = () => {
                     </Link>
 
                     {/* Desktop Navigation Links */}
-                    <div className="hidden md:flex items-center space-x-16">
+                    <div className="hidden md:flex items-center space-x-12">
                         <Link
-                            to="/#centers"
+                            to="/#about-us"
                             className="transition-colors font-medium text-gray-700 hover:text-primary"
                         >
-                            Centers
+                            About
                         </Link>
 
                         {/* Courses with dropdown */}
@@ -55,34 +55,34 @@ const Navbar = () => {
                             {/* Dropdown Menu */}
                             <div className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                                 <div className="py-2">
-                                    <a
-                                        href="/courses/iit-jee"
+                                    <Link
+                                        to="/courses/iit-jee"
                                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
                                     >
                                         <div className="font-semibold">IIT-JEE</div>
                                         <div className="text-xs text-gray-500">Engineering Entrance</div>
-                                    </a>
-                                    <a
-                                        href="/courses/neet"
+                                    </Link>
+                                    <Link
+                                        to="/courses/neet"
                                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
                                     >
                                         <div className="font-semibold">NEET</div>
                                         <div className="text-xs text-gray-500">Medical Entrance</div>
-                                    </a>
-                                    <a
-                                        href="/courses/foundation"
+                                    </Link>
+                                    <Link
+                                        to="/courses/foundation"
                                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
                                     >
                                         <div className="font-semibold">Foundation</div>
                                         <div className="text-xs text-gray-500">Class 8-10</div>
-                                    </a>
-                                    <a
-                                        href="/courses/cuet"
+                                    </Link>
+                                    <Link
+                                        to="/courses/cuet"
                                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
                                     >
                                         <div className="font-semibold">CUET</div>
                                         <div className="text-xs text-gray-500">University Entrance</div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -94,85 +94,48 @@ const Navbar = () => {
                             Results
                         </Link>
 
-                        <Link
-                            to="/scholarship"
-                            className="transition-colors font-medium text-gray-700 hover:text-primary"
-                        >
-                            Scholarship
-                        </Link>
-
-                        {/* Students Hub with dropdown */}
-                        <div className="relative group">
-                            <button
-                                className="flex items-center transition-colors font-medium text-gray-700 hover:text-primary"
-                            >
-                                Students Hub
-                                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-
-                            {/* Dropdown Menu */}
-                            <div className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                                <div className="py-2">
-                                    <a
-                                        href="#study-material"
-                                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
-                                    >
-                                        <div className="font-semibold">Study Material</div>
-                                        <div className="text-xs text-gray-500">Notes & Resources</div>
-                                    </a>
-                                    <a
-                                        href="#online-tests"
-                                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
-                                    >
-                                        <div className="font-semibold">Online Tests</div>
-                                        <div className="text-xs text-gray-500">Practice & Mock Tests</div>
-                                    </a>
-                                    <a
-                                        href="#doubt-clearing"
-                                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
-                                    >
-                                        <div className="font-semibold">Doubt Clearing</div>
-                                        <div className="text-xs text-gray-500">Ask Your Questions</div>
-                                    </a>
-                                    <a
-                                        href="#performance"
-                                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
-                                    >
-                                        <div className="font-semibold">Performance Analysis</div>
-                                        <div className="text-xs text-gray-500">Track Your Progress</div>
-                                    </a>
-                                    <a
-                                        href="#student-portal"
-                                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
-                                    >
-                                        <div className="font-semibold">Student Portal</div>
-                                        <div className="text-xs text-gray-500">Login to Dashboard</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Location Icon and CTA Button (Desktop) */}
-                    <div className="hidden md:flex items-center space-x-8">
                         <a
-                            href="https://www.google.com/maps/place/Gravity+Classes%7C+IIT+NEET+Coaching+in+Delhi+%7CJanakpuri+Delhi/@28.625426,77.067901,15z/data=!4m6!3m5!1s0x390d0533ea7f65a5:0x580f4b837803d464!8m2!3d28.6254256!4d77.0679005!16s%2Fg%2F11sfr70h3_?hl=en&entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="transition-colors p-2 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-100"
-                            aria-label="View location on Google Maps"
+                            href="#achievements"
+                            className="transition-colors font-medium text-gray-700 hover:text-primary"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const element = document.getElementById('achievements');
+                                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                            }}
                         >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
+                            Achievements
                         </a>
 
-                        <button className="bg-accent hover:bg-accent-dark text-white px-8 py-3.5 rounded-xl font-bold tracking-wide transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-                            Enquire Now
-                        </button>
+                        <a
+                            href="#testimonials"
+                            className="transition-colors font-medium text-gray-700 hover:text-primary"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const element = document.getElementById('testimonials');
+                                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                        >
+                            Testimonials
+                        </a>
+
+                        <div className="flex items-center space-x-4">
+                            <button className="bg-gradient-to-r from-accent to-accent-dark hover:from-accent-dark hover:to-orange-700 text-white px-10 py-3.5 text-lg rounded-2xl font-bold shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                                Enroll Now
+                            </button>
+
+                            <a
+                                href="https://www.google.com/maps/place/Gravity+Classes%7C+IIT+NEET+Coaching+in+Delhi+%7CJanakpuri+Delhi/@28.625426,77.067901,15z/data=!4m6!3m5!1s0x390d0533ea7f65a5:0x580f4b837803d464!8m2!3d28.6254256!4d77.0679005!16s%2Fg%2F11sfr70h3_?hl=en&entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transition-colors p-2 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-100"
+                                aria-label="View location on Google Maps"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                     {/* Mobile Hamburger Button */}
@@ -197,19 +160,19 @@ const Navbar = () => {
             >
                 <div className="flex flex-col items-center justify-center h-full space-y-8 text-lg font-medium">
                     <Link
-                        to="/#centers"
+                        to="/#about-us"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="text-gray-800 hover:text-accent transition-colors"
                     >
-                        Centers
+                        About
                     </Link>
 
                     <div className="flex flex-col items-center space-y-4">
                         <span className="text-gray-400 text-sm uppercase tracking-wider">Courses</span>
-                        <a href="/courses/iit-jee" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">IIT-JEE</a>
-                        <a href="/courses/neet" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">NEET</a>
-                        <a href="/courses/foundation" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">Foundation</a>
-                        <a href="/courses/cuet" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">CUET</a>
+                        <Link to="/courses/iit-jee" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">IIT-JEE</Link>
+                        <Link to="/courses/neet" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">NEET</Link>
+                        <Link to="/courses/foundation" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">Foundation</Link>
+                        <Link to="/courses/cuet" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-accent">CUET</Link>
                     </div>
 
                     <Link
@@ -220,16 +183,34 @@ const Navbar = () => {
                         Results
                     </Link>
 
-                    <Link
-                        to="/scholarship"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                    <a
+                        href="#achievements"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setIsMobileMenuOpen(false);
+                            const element = document.getElementById('achievements');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}
                         className="text-gray-800 hover:text-accent transition-colors"
                     >
-                        Scholarship
-                    </Link>
+                        Achievements
+                    </a>
 
-                    <button className="bg-accent hover:bg-accent-dark text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-accent/30">
-                        Enquire Now
+                    <a
+                        href="#testimonials"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setIsMobileMenuOpen(false);
+                            const element = document.getElementById('testimonials');
+                            if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="text-gray-800 hover:text-accent transition-colors"
+                    >
+                        Testimonials
+                    </a>
+
+                    <button className="bg-gradient-to-r from-accent to-accent-dark hover:from-accent-dark hover:to-orange-700 text-white px-10 py-4 text-lg rounded-2xl font-bold transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                        Enroll Now
                     </button>
                 </div>
             </div>

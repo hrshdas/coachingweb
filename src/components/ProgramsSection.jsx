@@ -34,18 +34,18 @@ const ProgramsSection = () => {
     ];
 
     return (
-        <section id="programs" className="relative py-12 md:py-20 bg-blue-50 overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-20">
+        <section id="programs" className="relative py-12 md:py-20 bg-white overflow-hidden">
+            {/* Background Pattern - Removed for white background */}
+            {/* <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
                     backgroundImage: `radial-gradient(circle at 2px 2px, rgba(30, 64, 175, 0.1) 1px, transparent 0)`,
                     backgroundSize: '40px 40px'
                 }}></div>
-            </div>
+            </div> */}
 
-            {/* Decorative Elements */}
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+            {/* Decorative Elements - Removed for white background */}
+            {/* <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div> */}
+            {/* <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div> */}
 
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Section Header */}
@@ -53,7 +53,7 @@ const ProgramsSection = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         Our <span className="text-black">Programs</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-500 max-w-2xl mx-auto">
                         Choose the right program tailored to your goals and aspirations
                     </p>
                 </ScrollReveal>
@@ -89,7 +89,7 @@ const ProgramsSection = () => {
                                     {program.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-center text-gray-700 text-sm">
                                             <svg
-                                                className="w-4 h-4 text-accent mr-2 flex-shrink-0"
+                                                className="w-4 h-4 text-primary mr-2 flex-shrink-0"
                                                 fill="currentColor"
                                                 viewBox="0 0 20 20"
                                             >
@@ -106,7 +106,7 @@ const ProgramsSection = () => {
 
                                 <Link
                                     to={`/courses/${program.slug}`}
-                                    className="block w-full bg-accent hover:bg-accent-dark text-white py-2.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 text-center text-sm"
+                                    className="block w-2/3 mx-auto bg-accent hover:bg-accent-dark text-white py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-1 text-center text-xs"
                                 >
                                     View Details
                                 </Link>

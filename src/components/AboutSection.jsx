@@ -34,7 +34,7 @@ const AboutSection = () => {
                         <h3 className="text-3xl font-bold text-primary mb-4">
                             Welcome to <span className="text-accent">Gravity Classes</span>
                         </h3>
-                        <div className="space-y-3 text-gray-700 leading-normal text-lg">
+                        <div className="space-y-3 text-gray-600 leading-normal text-lg">
                             <p>
                                 With the promise of <span className="font-semibold text-primary">"सुनिश्चित सफलता"</span>, Gravity Classes was established by a Team of IITians and Medical professionals. Gravity Classes is the heaven for the students who seek extensive knowledge, targeted practice and perfection in performance in their Entrance preparation.
                             </p>

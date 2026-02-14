@@ -49,13 +49,14 @@ const ResultsSection = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                         Our <span className="text-black">Achievements</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-500 max-w-2xl mx-auto">
                         Celebrating the success of our students who made their dreams come true
                     </p>
                 </ScrollReveal>
 
                 {/* Stats Row */}
                 <ScrollReveal
+                    id="achievements"
                     variant="fade"
                     className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 mb-12 border-y border-gray-100 py-8 bg-white"
                 >
@@ -93,7 +94,7 @@ const ResultsSection = () => {
 
                             <div className="relative z-10">
                                 <div className="flex items-center justify-center mb-3">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-dark rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                                         <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                                         </svg>
@@ -101,10 +102,10 @@ const ResultsSection = () => {
                                 </div>
 
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold mb-1 text-accent">
+                                    <div className="text-2xl font-bold mb-1 text-primary">
                                         {result.rank}
                                     </div>
-                                    <div className="text-base font-semibold mb-1 text-primary">
+                                    <div className="text-base font-semibold mb-1 text-gray-800">
                                         {result.exam}
                                     </div>
                                     <div className="text-gray-700 text-sm mb-0.5">

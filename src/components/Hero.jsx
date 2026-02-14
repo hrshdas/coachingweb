@@ -92,13 +92,13 @@ const Hero = () => {
                         <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight">
                             <span className="text-primary word-fade-in word-delay-1">We Shape</span>
                             <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-orange-400 to-accent gradient-animate word-fade-in word-delay-2">
-                                Future Leaders
+                            <span className="text-primary word-fade-in word-delay-2">
+                                Future <span className="text-accent">Leaders</span>
                             </span>
                         </h1>
 
                         {/* Subheading */}
-                        <p className="text-xl text-gray-700 leading-normal max-w-xl">
+                        <p className="text-xl text-gray-500 leading-normal max-w-xl">
                             <span className="inline-block word-fade-in word-delay-3">Elite coaching for IIT-JEE, NEET, and Foundation.</span>
                             <br />
                             <span className="inline-block word-fade-in word-delay-4">Where ambition meets excellence, and dreams transform into reality.</span>
