@@ -34,7 +34,7 @@ const ProgramsSection = () => {
     ];
 
     return (
-        <section id="programs" className="relative py-12 md:py-20 bg-white overflow-hidden">
+        <section id="courses" className="relative py-12 md:py-20 bg-white overflow-hidden">
             {/* Background Pattern - Removed for white background */}
             {/* <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{

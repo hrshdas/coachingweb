@@ -31,7 +31,7 @@ const LoadingScreen = () => {
             <div className="text-center">
                 {/* Logo with pulse animation */}
                 <div className="mb-8 animate-pulse px-4">
-                    <h1 className="text-4xl md:text-7xl font-bold text-white mb-2 break-words">
+                    <h1 className="text-4xl md:text-7xl font-bold font-sans text-white mb-2 break-words">
                         Gravity<span className="text-accent-light">Classes</span>
                     </h1>
                     <p className="text-white/80 text-xl">सुनिश्चित सफलता</p>

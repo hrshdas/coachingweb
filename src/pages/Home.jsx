@@ -14,7 +14,9 @@ const Home = () => {
     return (
         <div className="min-h-screen">
             <Navbar />
-            <Hero />
+            <section id="home">
+                <Hero />
+            </section>
             <EnrollmentFlow />
             <ProgramsSection />
             <ResultsSection />
@@ -22,7 +24,6 @@ const Home = () => {
             <WhyChooseUs />
             <Testimonials />
             <CTASection />
-            <CentresBar />
             <Footer />
         </div>
     );

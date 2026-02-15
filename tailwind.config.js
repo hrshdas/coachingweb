@@ -20,7 +20,7 @@ export default {
         background: '#FAFAFA',
       },
       fontFamily: {
-        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        sans: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],

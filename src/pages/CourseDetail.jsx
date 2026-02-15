@@ -1,11 +1,12 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { getCourseBySlug } from '../data/courseData.jsx';
+import { getCourseBySlug, getAllCourses } from '../data/courseData.jsx';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const CourseDetail = () => {
     const { courseSlug } = useParams();
     const course = getCourseBySlug(courseSlug);
+    const allCourses = getAllCourses();
 
     // If course not found, redirect to home
     if (!course) {
@@ -13,13 +14,13 @@ const CourseDetail = () => {
     }
 
     return (
-        <div className="min-h-screen bg-blue-50">
+        <div className="min-h-screen bg-white font-sans text-gray-800">
             <Navbar />
 
             {/* Breadcrumb */}
-            <div className="bg-white border-b border-gray-200 pt-20">
-                <div className="max-w-7xl mx-auto px-6 py-4">
-                    <nav className="flex items-center space-x-2 text-sm text-gray-600">
+            <div className="bg-white border-b border-gray-100 pt-24 pb-4">
+                <div className="max-w-7xl mx-auto px-6">
+                    <nav className="flex items-center space-x-2 text-sm text-gray-500">
                         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
                         <span>/</span>
                         <span className="text-gray-400">Courses</span>
@@ -30,90 +31,82 @@ const CourseDetail = () => {
             </div>
 
             {/* Hero Section */}
-            <section className="relative py-20 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute inset-0" style={{
-                        backgroundImage: `radial-gradient(circle at 2px 2px, rgba(30, 64, 175, 0.1) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }}></div>
-                </div>
-
-                <div className="relative max-w-7xl mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h1 className="text-5xl font-bold text-primary mb-4">
-                                {course.fullTitle}
+            <section className="bg-gradient-to-br from-blue-50 to-white py-16 md:py-24 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+                        <div className="md:w-1/2 space-y-6">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                                The Best <span className="text-accent">{course.title}</span> Coaching Institute <br className="hidden md:block" />
+                                <span className="text-2xl md:text-3xl font-medium text-gray-600 block mt-2">for Class : 11th & 12th</span>
                             </h1>
-                            <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light mb-6">
-                                {course.tagline}
-                            </p>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
                                 {course.description}
                             </p>
-                            <div className="flex gap-4">
-                                <button className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                                    Enroll Now
-                                </button>
-                                <button className="bg-white hover:bg-gray-50 text-primary border-2 border-primary px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg">
-                                    Download Brochure
+
+                            <div className="flex flex-wrap items-center gap-4 pt-6">
+                                <a href="tel:+919999345093" className="px-8 py-4 bg-gray-200 hover:bg-gray-300 text-gray-900 font-bold rounded-lg transition-all shadow-sm hover:shadow-md">
+                                    Call Now
+                                </a>
+                                <button className="text-primary font-bold hover:text-accent px-4 text-lg transition-colors underline decoration-2 decoration-transparent hover:decoration-accent underline-offset-4">
+                                    Book a Class
                                 </button>
                             </div>
                         </div>
-                        <div className="flex justify-center">
-                            <img
-                                src={course.image}
-                                alt={course.title}
-                                className="rounded-2xl shadow-2xl w-full max-w-md"
-                            />
+                        <div className="md:w-1/2 flex justify-center md:justify-end">
+                            <div className="relative">
+                                <div className="absolute -inset-4 bg-accent/10 rounded-full blur-2xl transform rotate-12"></div>
+                                <img
+                                    src={course.image}
+                                    alt={course.title}
+                                    className="relative w-full max-w-md object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Programs Section - Only for courses with programs */}
-            {course.programs && (
-                <section className="py-20 bg-white">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <h2 className="text-4xl font-bold text-primary mb-4 text-center">
-                            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Programs</span>
-                        </h2>
-                        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                            Choose the program that best fits your academic journey and goals
-                        </p>
+            {/* What's Included Section */}
+            <section className="py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-16 relative inline-block left-1/2 transform -translate-x-1/2">
+                        What's Included
+                        <span className="absolute bottom-0 left-0 w-full h-1 bg-accent rounded-full opacity-70"></span>
+                    </h2>
 
-                        <div className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        {course.features.map((feature, index) => (
+                            <div key={index} className="group bg-gray-50 border border-gray-100 p-8 rounded-2xl hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Programs List (Retained for detail but styled minimally) */}
+            {course.programs && (
+                <section className="py-20 bg-gray-50">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <h2 className="text-3xl font-bold text-center text-primary mb-12">
+                            Our Programs
+                        </h2>
+                        <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
                             {course.programs.map((program, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-                                >
-                                    <div className="flex items-start gap-6">
-                                        <div className="flex-shrink-0">{program.icon}</div>
-                                        <div className="flex-1">
-                                            <h3 className="text-2xl font-bold text-primary mb-2">
-                                                {program.title}
-                                            </h3>
-                                            <p className="text-sm text-accent font-semibold mb-4">
-                                                {program.subtitle}
-                                            </p>
-                                            <p className="text-gray-700 leading-relaxed mb-6">
-                                                {program.description}
-                                            </p>
-                                            <div className="flex flex-wrap gap-4">
-                                                <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg border border-gray-200">
-                                                    <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                    <span className="text-sm font-medium text-gray-700">Duration: {program.duration}</span>
-                                                </div>
-                                                <div className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg border border-gray-200">
-                                                    <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                    <span className="text-sm font-medium text-gray-700">Target: {program.targetExam}</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div key={index} className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h3 className="text-2xl font-bold text-primary">{program.title}</h3>
+                                        <span className="bg-blue-50 text-primary text-xs font-bold px-3 py-1 rounded-full border border-blue-100">
+                                            {program.duration}
+                                        </span>
+                                    </div>
+                                    <p className="text-sm text-accent font-semibold mb-4 uppercase tracking-wide">{program.subtitle}</p>
+                                    <p className="text-gray-600 mb-6 leading-relaxed">{program.description}</p>
+                                    <div className="flex items-center text-sm font-medium text-gray-500 border-t border-gray-100 pt-4">
+                                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        Target: <span className="text-gray-900 ml-1">{program.targetExam}</span>
                                     </div>
                                 </div>
                             ))}
@@ -122,183 +115,75 @@ const CourseDetail = () => {
                 </section>
             )}
 
-            {/* Highlights Section */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-                        Course <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Highlights</span>
+            {/* Success Stories Section */}
+            <section className="py-24 bg-gray-100 relative">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-16">
+                        Success Stories
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {course.highlights.map((highlight, index) => (
-                            <div key={index} className="flex items-center space-x-3 bg-blue-50 p-4 rounded-xl">
-                                <svg className="w-6 h-6 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                </svg>
-                                <span className="text-gray-700 font-medium">{highlight}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
-            {/* Features Section */}
-            <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
-                        What's <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Included</span>
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {course.features.map((feature, index) => (
-                            <div key={index} className="bg-white/80 backdrop-blur-xl border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                <div className="mb-3">{feature.icon}</div>
-                                <h3 className="text-lg font-bold text-primary mb-2">{feature.title}</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Syllabus Section */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
-                        Course <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Syllabus</span>
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {Object.entries(course.syllabus).map(([subject, topics], index) => (
-                            <div key={index} className="bg-blue-50 rounded-2xl p-6 border border-gray-200">
-                                <h3 className="text-xl font-bold text-primary mb-4 capitalize">{subject}</h3>
-                                <ul className="space-y-2">
-                                    {topics.map((topic, idx) => (
-                                        <li key={idx} className="flex items-start space-x-2">
-                                            <span className="text-accent mt-1">•</span>
-                                            <span className="text-gray-700">{topic}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Batches & Schedule */}
-            <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
-                        Batches & <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Schedule</span>
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {course.batches.map((batch, index) => (
-                            <div key={index} className="bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                                <h3 className="text-xl font-bold text-primary mb-4">{batch.name}</h3>
-                                <div className="space-y-3 text-gray-600">
-                                    <div className="flex items-center space-x-2">
-                                        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        <span>{batch.duration}</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span className="text-sm">{batch.timing}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Fee Structure */}
-            <section className="py-16 bg-white">
-                <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
-                        Fee <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Structure</span>
-                    </h2>
-                    <div className="bg-gradient-to-br from-blue-50 to-white border border-gray-200 rounded-2xl p-8 shadow-xl">
-                        <div className="space-y-4">
-                            {Object.entries(course.fees).map(([key, value], index) => (
-                                key !== 'scholarship' && (
-                                    <div key={index} className="flex justify-between items-center py-3 border-b border-gray-200 last:border-0">
-                                        <span className="text-gray-700 font-medium capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                                        <span className="text-2xl font-bold text-primary">{value}</span>
-                                    </div>
-                                )
-                            ))}
-                        </div>
-                        <div className="mt-6 pt-6 border-t border-gray-300">
-                            <div className="flex items-center space-x-2 text-accent">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <span className="font-semibold">Scholarship: {course.fees.scholarship}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Success Stories */}
-            <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
-                        Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Stories</span>
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {course.successStories.map((story, index) => (
-                            <div key={index} className="bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-lg text-center">
-                                <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <span className="text-2xl font-bold text-primary">{story.name.charAt(0)}</span>
+                            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 text-center group">
+                                <div className="h-16 w-16 bg-blue-50 rounded-full flex items-center justify-center text-primary font-bold text-2xl mb-6 mx-auto group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-inner">
+                                    {story.name.charAt(0)}
                                 </div>
-                                <h3 className="text-lg font-bold text-primary mb-2">{story.name}</h3>
-                                <p className="text-accent font-semibold mb-1">{story.achievement}</p>
-                                <p className="text-gray-500 text-sm">{story.year}</p>
+                                <h3 className="text-xl font-bold text-primary mb-2">{story.name}</h3>
+                                <p className="text-accent font-bold text-sm mb-2">{story.achievement}</p>
+                                <p className="text-gray-400 text-xs font-medium uppercase tracking-wider">{story.year}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* FAQs */}
-            <section className="py-16 bg-white">
-                <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-primary mb-12 text-center">
-                        Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Questions</span>
+            {/* FAQ Section */}
+            <section className="py-24 bg-white">
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl font-bold text-center text-primary mb-12">
+                        Common Questions
                     </h2>
+
                     <div className="space-y-4">
                         {course.faqs.map((faq, index) => (
-                            <div key={index} className="bg-blue-50 rounded-xl p-6 border border-gray-200">
-                                <h3 className="text-lg font-bold text-primary mb-3">{faq.question}</h3>
-                                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                            <div key={index} className="group border border-gray-200 rounded-xl p-6 hover:border-accent/50 transition-colors bg-gray-50/50 hover:bg-white">
+                                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors flex items-start">
+                                    <span className="text-accent mr-3 mt-1">Q.</span>
+                                    {faq.question}
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed pl-7 border-l-2 border-gray-200 group-hover:border-accent/30 pl-4 ml-1 transition-all">
+                                    {faq.answer}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-br from-primary via-primary-light to-primary relative overflow-hidden">
-                <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
-
-                <div className="relative max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-bold text-white mb-6">
-                        Ready to Start Your Journey?
+            {/* Other Programs Section */}
+            <section className="py-24 bg-gray-50 border-t border-gray-200">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h2 className="text-3xl font-bold text-center text-primary mb-12">
+                        Explore Other Programs
                     </h2>
-                    <p className="text-xl text-white/90 mb-8">
-                        Join thousands of successful students and achieve your dreams with Gravity Classes
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-accent hover:bg-accent-dark text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                            Enroll Now
-                        </button>
-                        <button className="bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl">
-                            Schedule a Counseling Session
-                        </button>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {allCourses.filter(c => c.id !== course.id).map((otherCourse) => (
+                            <Link key={otherCourse.id} to={`/courses/${otherCourse.id}`} className="block group h-full">
+                                <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-gray-100 hover:border-accent/20 flex flex-col items-center text-center">
+                                    <div className="mb-4 p-3 bg-blue-50 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                                        {/* Simple icon placeholder or use course.icon if available/serializable */}
+                                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-2">
+                                        {otherCourse.title}
+                                    </h3>
+                                    <span className="text-accent text-sm font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center">
+                                        View Details <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                                    </span>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </section>
