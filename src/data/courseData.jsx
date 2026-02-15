@@ -96,7 +96,7 @@ export const coursesData = {
             {
                 title: 'Two Year Integrated Program for 10th Passed Students',
                 subtitle: 'For 10th passed/ 11th studying students',
-                description: 'This program is specially designed for 10th passed/ 11th studying students having clear vision to become an Engineer by cracking IIT-JEE. In this program we will train you for IIT-JEE Main and Advance along with your school curriculum. Our mentors focus on completing every topic of IIT-JEE listed in the syllabus by NTA in a step-by-step manner with lots of online test as well as offline test. If you think you are capable, if you think that you can make it to the top, this course is precisely for you for "सुनिश्चित सफलता" in both IIT-JEE and School Examinations.',
+                description: 'Designed for students aiming to crack IIT-JEE with a clear vision. Covers both School and JEE syllabus comprehensively, ensuring a strong foundation and top rank.',
                 duration: '2 Years',
                 targetExam: 'IIT-JEE Main and Advance',
                 icon: (
@@ -108,7 +108,7 @@ export const coursesData = {
             {
                 title: 'One Year Integrated Program for 11th Passed Students',
                 subtitle: 'For 11th passed/ 12th studying students',
-                description: 'This program is specially designed for 11th passed/ 12th studying students having clear vision to become an Engineer by cracking IIT-JEE. In this program we will train you for IIT-JEE Main and Advance along with your Board Examination. Our mentors focus on completing every topic of IIT-JEE from both the class 11th and 12th listed in the syllabus by NTA and CBSE in a step-by-step manner with lots of online test as well as offline test. If you think you are capable, if you think that you can make it to the top, this course is precisely for you for "सुनिश्चित सफलता" in both IIT-JEE and Board Examination.',
+                description: 'Targeted at students moving to Class 12. Focuses on both Board exams and IIT-JEE, covering the complete syllabus for guaranteed success.',
                 duration: '1 Year',
                 targetExam: 'IIT-JEE Main and Advance + Board Examination',
                 icon: (
@@ -120,7 +120,7 @@ export const coursesData = {
             {
                 title: 'Dropper\'s Program for 12th Passed Students',
                 subtitle: 'For 12th passed students',
-                description: 'This program is specially designed for 12th passed students who has dropped a year with clear vision to become an Engineer by cracking IIT-JEE Mains and Advance. Your vision is our mission. In this program our mentors focused on sharpening the existing skills of the students by conceptual study. Through our regress online and offline test series we recognize your week areas and work in a planned manner to rectify. This program is precisely for you to boost your confidence, result, and rank in IIT-JEE Mains and Advance. We assure "सुनिश्चित सफलता" in IIT-JEE Mains and Advance.',
+                description: 'Exclusive program for 12th passed students dedicating a year to IIT-JEE. Intensive practice, error analysis, and concept strengthening for top results.',
                 duration: '1 Year',
                 targetExam: 'IIT-JEE Mains and Advance',
                 icon: (
@@ -132,7 +132,7 @@ export const coursesData = {
             {
                 title: 'Crash Course',
                 subtitle: 'Short-term intensive program',
-                description: 'This short-term program is specially designed to give you final touch for upcoming JEE Main Examination. In this program Our Mentor focused on Fasttrack methodology to cover and improve most of the important syllabus to enhance your skill, confidence and off course your rank in JEE Mains Examination. Your self-believe and our planned effort will assure "सुनिश्चित सफलता" in JEE Main Examination.',
+                description: 'Fast-track program for final revision. Focuses on high-weightage topics, speed improvement, and rank enhancement for JEE Main.',
                 duration: '3-6 Months',
                 targetExam: 'JEE Main Examination',
                 icon: (
@@ -244,7 +244,7 @@ export const coursesData = {
             {
                 title: 'Two Year Integrated Program for 10th Passed Students',
                 subtitle: 'For 10th passed/ 11th studying students',
-                description: 'This program is specially designed for 10th passed/ 11th studying students having clear vision to focus on their Board examination and go for general study from central universities like Delhi University. In this program we will train you for CUET along with your school curriculum. Our mentors focus on completing every topic of CUET listed in the syllabus by NTA in a step-by-step manner with lots of online test as well as offline test. If you think you are capable, if you think that you can make it to the top, this course is precisely for you to assure "सुनिश्चित सफलता" in both CUET and Board Examination.',
+                description: 'Integrated program covering School curriculum and CUET prep. Builds correct aptitude and subject knowledge for top central universities.',
                 duration: '2 Years',
                 targetExam: 'NEET + Board Examination',
                 icon: (
@@ -256,7 +256,7 @@ export const coursesData = {
             {
                 title: 'One Year Integrated Program for 11th Passed Students',
                 subtitle: 'For 11th passed/ 12th studying students',
-                description: 'This program is specially designed for 11th passed/ 12th studying students having clear vision to focus on their Board examination and go for general study from central universities like Delhi University. In this program we will train you for CUET along with your Board Examination. Our mentors focus on completing every topic of CUET listed in the syllabus by NTA in a step-by-step manner with lots of online test as well as offline test. If you think you are capable, if you think that you can make it to the top, this course is precisely for you to assure "सुनिश्चित सफलता" in both CUET and Board Examination.',
+                description: 'Balanced preparation for Class 12 Boards and CUET. Ensures high board percentage while securing a seat in your dream university.',
                 duration: '1 Year',
                 targetExam: 'NEET + Board Examination',
                 icon: (
@@ -368,7 +368,7 @@ export const coursesData = {
             {
                 title: 'Three Year (1+2) Integrated Program for 9th Passed Students',
                 subtitle: 'For 9th passed/ 10th studying students',
-                description: 'This program is specially designed for 9th passed/ 10th studying students. This program is specially designed to build strong foundation for upcoming competitions. This program is divided into two parts. First part is of one year in which our Mentor focused on your Board Examination, NTSE, KVPY and OLYMPIAD. During this program our mentors recognize the area of interest of students and guide them properly to choose best suited stream after 10th class.\n\nSecond Part is of two years in which students can opt for any one of the programs from IIT-JEE, NEET and CUET. In this program we will train you for the IIT-JEE/NEET/CUET along with your Board Examination. Our mentors focus on completing every topic of IIT-JEE/NEET/CUET from both the class 11th and 12th listed in the syllabus by NTA and CBSE in a step-by-step manner with lots of online test as well as offline test.\n\nIf you think you are capable, if you think that you can make it to the top, this course is precisely for you to assure "सुनिश्चित सफलता" in Upcoming Competitions for Bright Carrier.',
+                description: 'Starts early to build a strong base for 10th Boards, NTSE, and Olympiads. Smooth transition into IIT-JEE/NEET preparation in Class 11 & 12.',
                 duration: '3 Years (1+2)',
                 targetExam: 'Board + NTSE/KVPY/Olympiad → IIT-JEE/NEET/CUET',
                 icon: (
@@ -380,7 +380,7 @@ export const coursesData = {
             {
                 title: 'Four Year (2+2) Integrated Program for 8th Passed Students',
                 subtitle: 'For 8th passed/ 9th studying students',
-                description: 'This program is specially designed for 8th passed/ 9th studying students. This course develops a strategic foundation for young students who are aware that starting early is the key to achieve their goalin upcoming competitions. This program is divided into two parts. First part is of two years in which our Mentor focused on your School Examination, NTSE, KVPY and OLYMPIAD. During this program our mentors recognize the area of interest of students and guide them properly to choose best suited stream after 10th class.\n\nSecond Part is of two years in which students can opt for any one of the programs from IIT-JEE, NEET and CUET. In this program we will train you for the IIT-JEE/NEET/CUET along with your Board Examination. Our mentors focus on completing every topic of IIT-JEE/NEET/CUET from both the class 11th and 12th listed in the syllabus by NTA and CBSE in a step-by-step manner with lots of online test as well as offline test.\n\nIf you think you are capable, if you think that you can make it to the top, this course is precisely for you to assure "सुनिश्चित सफलता" in Upcoming Competitions for Bright Carrier.',
+                description: 'A 4-year journey starting from Class 9. Focuses on NTSE/Olympiads initially, then transforms into rigorous JEE/NEET training.',
                 duration: '4 Years (2+2)',
                 targetExam: 'Board + NTSE/KVPY/Olympiad → IIT-JEE/NEET/CUET',
                 icon: (
@@ -494,7 +494,7 @@ export const coursesData = {
             {
                 title: 'Two Year Integrated Program for 10th Passed Students',
                 subtitle: 'For 10th passed/ 11th studying students',
-                description: 'This program is specially designed for 10th passed/ 11th studying students having clear vision to focus on their Board examination and go for general study from central universities like Delhi University. In this program we will train you for CUET along with your school curriculum. Our mentors focus on completing every topic of CUET listed in the syllabus by NTA in a step-by-step manner with lots of online test as well as offline test. If you think you are capable, if you think that you can make it to the top, this course is precisely for you to assure "सुनिश्चित सफलता" in both CUET and Board Examination.',
+                description: 'Comprehensive 2-year strategy for CUET and Boards. Ideal for students aiming for top colleges through Common University Entrance Test.',
                 duration: '2 Years',
                 targetExam: 'CUET + Board Examination',
                 icon: (
@@ -506,7 +506,7 @@ export const coursesData = {
             {
                 title: 'One Year Integrated Program for 11th Passed Students',
                 subtitle: 'For 11th passed/ 12th studying students',
-                description: 'This program is specially designed for 11th passed/ 12th studying students having clear vision to focus on their Board examination and go for general study from central universities like Delhi University. In this program we will train you for CUET along with your Board Examination. Our mentors focus on completing every topic of CUET listed in the syllabus by NTA in a step-by-step manner with lots of online test as well as offline test. If you think you are capable, if you think that you can make it to the top, this course is precisely for you to assure "सुनिश्चित सफलता" in both CUET and Board Examination.',
+                description: 'Intensive 1-year program balancing Class 12 Boards and CUET prep. Ensures maximum score with optimized study plan.',
                 duration: '1 Year',
                 targetExam: 'CUET + Board Examination',
                 icon: (

@@ -67,11 +67,10 @@ const CourseDetail = () => {
             </section>
 
             {/* What's Included Section */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-16 relative inline-block left-1/2 transform -translate-x-1/2">
-                        What's Included
-                        <span className="absolute bottom-0 left-0 w-full h-1 bg-accent rounded-full opacity-70"></span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-center text-primary mb-16 relative inline-block left-1/2 transform -translate-x-1/2">
+                        What's <span className="text-black">Included</span>
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -87,24 +86,25 @@ const CourseDetail = () => {
             </section>
 
             {/* Programs List (Retained for detail but styled minimally) */}
+            {/* Programs List */}
             {course.programs && (
-                <section className="py-20 bg-gray-50">
+                <section className="py-16 md:py-24 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-center text-primary mb-12">
-                            Our Programs
+                        <h2 className="text-3xl md:text-5xl font-bold text-center text-primary mb-12">
+                            Our <span className="text-black">Programs</span>
                         </h2>
                         <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
                             {course.programs.map((program, index) => (
-                                <div key={index} className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <h3 className="text-2xl font-bold text-primary">{program.title}</h3>
-                                        <span className="bg-blue-50 text-primary text-xs font-bold px-3 py-1 rounded-full border border-blue-100">
+                                <div key={index} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                                    <div className="flex justify-between items-start mb-3">
+                                        <h3 className="text-xl md:text-2xl font-bold text-primary">{program.title}</h3>
+                                        <span className="bg-blue-50 text-primary text-xs font-bold px-3 py-1 rounded-full border border-blue-100 whitespace-nowrap ml-2">
                                             {program.duration}
                                         </span>
                                     </div>
-                                    <p className="text-sm text-accent font-semibold mb-4 uppercase tracking-wide">{program.subtitle}</p>
-                                    <p className="text-gray-600 mb-6 leading-relaxed">{program.description}</p>
-                                    <div className="flex items-center text-sm font-medium text-gray-500 border-t border-gray-100 pt-4">
+                                    <p className="text-xs text-accent font-semibold mb-3 uppercase tracking-wide">{program.subtitle}</p>
+                                    <p className="text-gray-600 mb-6 leading-relaxed text-sm line-clamp-3 flex-grow">{program.description}</p>
+                                    <div className="flex items-center text-xs font-medium text-gray-500 border-t border-gray-100 pt-4 mt-auto">
                                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                         Target: <span className="text-gray-900 ml-1">{program.targetExam}</span>
                                     </div>
@@ -115,43 +115,21 @@ const CourseDetail = () => {
                 </section>
             )}
 
-            {/* Success Stories Section */}
-            <section className="py-24 bg-gray-100 relative">
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-16">
-                        Success Stories
-                    </h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {course.successStories.map((story, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 text-center group">
-                                <div className="h-16 w-16 bg-blue-50 rounded-full flex items-center justify-center text-primary font-bold text-2xl mb-6 mx-auto group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-inner">
-                                    {story.name.charAt(0)}
-                                </div>
-                                <h3 className="text-xl font-bold text-primary mb-2">{story.name}</h3>
-                                <p className="text-accent font-bold text-sm mb-2">{story.achievement}</p>
-                                <p className="text-gray-400 text-xs font-medium uppercase tracking-wider">{story.year}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* FAQ Section */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-24 bg-white">
                 <div className="max-w-3xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center text-primary mb-12">
-                        Common Questions
+                    <h2 className="text-3xl md:text-5xl font-bold text-center text-primary mb-8">
+                        Common <span className="text-black">Questions</span>
                     </h2>
 
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                         {course.faqs.map((faq, index) => (
-                            <div key={index} className="group border border-gray-200 rounded-xl p-6 hover:border-accent/50 transition-colors bg-gray-50/50 hover:bg-white">
-                                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors flex items-start">
-                                    <span className="text-accent mr-3 mt-1">Q.</span>
+                            <div key={index} className="group border border-gray-200 rounded-xl p-4 hover:border-accent/50 transition-colors bg-gray-50/50 hover:bg-white">
+                                <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors flex items-start">
+                                    <span className="text-accent mr-2 mt-0.5">Q.</span>
                                     {faq.question}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed pl-7 border-l-2 border-gray-200 group-hover:border-accent/30 pl-4 ml-1 transition-all">
+                                <p className="text-gray-600 text-sm leading-relaxed pl-6 border-l-2 border-gray-200 group-hover:border-accent/30 ml-0.5 transition-all line-clamp-2">
                                     {faq.answer}
                                 </p>
                             </div>
@@ -161,10 +139,10 @@ const CourseDetail = () => {
             </section>
 
             {/* Other Programs Section */}
-            <section className="py-24 bg-gray-50 border-t border-gray-200">
+            <section className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-center text-primary mb-12">
-                        Explore Other Programs
+                    <h2 className="text-3xl md:text-5xl font-bold text-center text-primary mb-12">
+                        Explore <span className="text-black">Other Programs</span>
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
