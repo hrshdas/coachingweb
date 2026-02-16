@@ -7,28 +7,28 @@ const ProgramsSection = () => {
             title: 'IIT-JEE',
             slug: 'iit-jee',
             description: 'Comprehensive preparation for JEE Main and Advanced with expert faculty and proven methodology',
-            image: '/courses/iit-jee.png',
+            image: '/courses/iit-jee-new.png',
             features: ['Live Classes', 'Test Series', 'Doubt Clearing'],
         },
         {
             title: 'NEET',
             slug: 'neet',
             description: 'Complete NEET preparation with focused approach on Biology, Physics, and Chemistry',
-            image: '/courses/neet.png',
+            image: '/courses/neet-new.png',
             features: ['Expert Faculty', 'Mock Tests', 'Study Material'],
         },
         {
             title: 'Foundation',
             slug: 'foundation',
             description: 'Strong foundation building for Class 8-10 students preparing for competitive exams',
-            image: '/courses/foundation.png',
+            image: '/courses/foundation-new.png',
             features: ['Concept Building', 'Regular Tests', 'Mentorship'],
         },
         {
             title: 'CUET',
             slug: 'cuet',
             description: 'Complete preparation for Common University Entrance Test with domain subjects and general test',
-            image: '/courses/cuet.png',
+            image: '/courses/cuet-new.png',
             features: ['Domain Subjects', 'General Test', 'University Counseling'],
         },
     ];
@@ -68,11 +68,11 @@ const ProgramsSection = () => {
                             className={`group bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
                         >
                             {/* Course Image */}
-                            <div className="relative h-40 overflow-hidden">
+                            <div className="relative overflow-hidden aspect-[4/3]">
                                 <img
                                     src={program.image}
                                     alt={program.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                                    className="w-full h-full object-contain p-4 transform group-hover:scale-110 transition-transform duration-300"
                                 />
                             </div>
 
@@ -87,7 +87,7 @@ const ProgramsSection = () => {
 
                                 <ul className="space-y-1.5 mb-5">
                                     {program.features.map((feature, idx) => (
-                                        <li key={idx} className="flex items-center text-gray-700 text-sm">
+                                        <li key={idx} className="flex items-center justify-center text-gray-700 text-sm">
                                             <svg
                                                 className="w-4 h-4 text-primary mr-2 flex-shrink-0"
                                                 fill="currentColor"

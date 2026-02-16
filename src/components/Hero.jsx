@@ -102,11 +102,15 @@ const Hero = () => {
                             <span className="inline-block word-fade-in word-delay-3">Elite coaching for IIT-JEE, NEET, and Foundation.</span>
                             <br />
                             <span className="inline-block word-fade-in word-delay-4">Where ambition meets excellence, and dreams transform into reality.</span>
+                            <br />
+                            <span className="inline-block word-fade-in word-delay-5 mt-4 font-semibold text-primary">
+                                We promise <span className="text-accent">“सुनिश्चित सफलता”</span>
+                            </span>
                         </p>
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 pt-4">
-                            <button className="group relative bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:-translate-y-1 word-fade-in word-delay-5">
+                            <button className="group relative bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 hover:-translate-y-1 word-fade-in word-delay-6">
                                 <span className="relative z-10">Start Your Journey</span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-accent-light to-accent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             </button>
@@ -118,7 +122,7 @@ const Hero = () => {
                                         block: 'start'
                                     });
                                 }}
-                                className="group bg-white/80 backdrop-blur-sm hover:bg-white text-primary border border-primary/30 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl word-fade-in word-delay-5"
+                                className="group bg-white/80 backdrop-blur-sm hover:bg-white text-primary border border-primary/30 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl word-fade-in word-delay-6"
                             >
                                 <span className="flex items-center space-x-2">
                                     <span>Explore Programs</span>

@@ -87,31 +87,31 @@ const ResultsSection = () => {
                             key={index}
                             variant="slideUp"
                             delay={index * 0.1}
-                            className="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+                            className="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
                         >
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                             <div className="relative z-10">
-                                <div className="flex items-center justify-center mb-3">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="flex items-center justify-center mb-6">
+                                    <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                                         </svg>
                                     </div>
                                 </div>
 
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold mb-1 text-primary">
+                                    <div className="text-4xl font-bold mb-3 text-primary">
                                         {result.rank}
                                     </div>
-                                    <div className="text-base font-semibold mb-1 text-gray-800">
+                                    <div className="text-xl font-semibold mb-2 text-gray-800">
                                         {result.exam}
                                     </div>
-                                    <div className="text-gray-700 text-sm mb-0.5">
+                                    <div className="text-lg text-gray-700 mb-1">
                                         {result.name}
                                     </div>
-                                    <div className="text-gray-500 text-xs">
+                                    <div className="text-gray-500 font-medium">
                                         {result.year}
                                     </div>
                                 </div>

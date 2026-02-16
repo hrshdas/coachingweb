@@ -186,12 +186,9 @@ const EnrollmentFlow = () => {
                             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-display">
                                 Let's Pinpoint Your <span className="text-blue-600">Dream</span>
                             </h2>
-                            <h3 className="text-2xl md:text-3xl font-bold text-gray-500 mb-2">
-                                Select your goal
+                            <h3 className="text-xl md:text-2xl font-medium text-gray-600 mb-10">
+                                Select Your Goal
                             </h3>
-                            <p className="text-2xl md:text-3xl text-cyan-400 font-semibold mb-12">
-                                to explore our courses
-                            </p>
 
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                                 {goals.map((goal) => (

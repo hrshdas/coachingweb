@@ -36,7 +36,7 @@ const CourseDetail = () => {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="md:w-1/2 space-y-6">
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                                The Best <span className="text-accent">{course.title}</span> Coaching Institute <br className="hidden md:block" />
+                                The Best <span className="text-accent">{course.title}</span> Institute <br className="hidden md:block" />
                                 <span className="text-2xl md:text-3xl font-medium text-gray-600 block mt-2">for Class : 11th & 12th</span>
                             </h1>
                             <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
@@ -104,9 +104,9 @@ const CourseDetail = () => {
                                     </div>
                                     <p className="text-xs text-accent font-semibold mb-3 uppercase tracking-wide">{program.subtitle}</p>
                                     <p className="text-gray-600 mb-6 leading-relaxed text-sm line-clamp-3 flex-grow">{program.description}</p>
-                                    <div className="flex items-center text-xs font-medium text-gray-500 border-t border-gray-100 pt-4 mt-auto">
-                                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                                        Target: <span className="text-gray-900 ml-1">{program.targetExam}</span>
+                                    <div className="flex items-center text-base font-semibold text-gray-500 border-t border-gray-100 pt-4 mt-auto">
+                                        <svg className="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        Target: <span className="text-gray-900 ml-2">{program.targetExam}</span>
                                     </div>
                                 </div>
                             ))}
@@ -129,7 +129,7 @@ const CourseDetail = () => {
                                     <span className="text-accent mr-2 mt-0.5">Q.</span>
                                     {faq.question}
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed pl-6 border-l-2 border-gray-200 group-hover:border-accent/30 ml-0.5 transition-all line-clamp-2">
+                                <p className="text-gray-600 text-sm leading-relaxed pl-6 border-l-2 border-gray-200 group-hover:border-accent/30 ml-0.5 transition-all line-clamp-2 min-h-[3rem]">
                                     {faq.answer}
                                 </p>
                             </div>
@@ -145,9 +145,9 @@ const CourseDetail = () => {
                         Explore <span className="text-black">Other Programs</span>
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="flex flex-wrap justify-center gap-6">
                         {allCourses.filter(c => c.id !== course.id).map((otherCourse) => (
-                            <Link key={otherCourse.id} to={`/courses/${otherCourse.id}`} className="block group h-full">
+                            <Link key={otherCourse.id} to={`/courses/${otherCourse.id}`} className="block group h-full w-full sm:max-w-xs flex-grow-0">
                                 <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-gray-100 hover:border-accent/20 flex flex-col items-center text-center">
                                     <div className="mb-4 p-3 bg-blue-50 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary">
                                         {/* Simple icon placeholder or use course.icon if available/serializable */}

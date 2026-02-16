@@ -257,6 +257,18 @@ h6 {
   animation-delay: 0.5s;
 }
 
+.word-delay-6 {
+  animation-delay: 0.6s;
+}
+
+.word-delay-7 {
+  animation-delay: 0.7s;
+}
+
+.word-delay-8 {
+  animation-delay: 0.8s;
+}
+
 /* Carousel Scroll Animation */
 @keyframes scrollLeft {
   0% {
