@@ -29,14 +29,14 @@ const EnrollmentFlow = () => {
             id: 'doctor',
             label: 'Doctor',
             icon: (
-                <img src={doctorIcon} alt="Doctor" className="w-20 h-20 object-contain" />
+                <img src={doctorIcon} alt="Doctor" className="w-28 h-28 object-contain" />
             )
         },
         {
             id: 'engineer',
             label: 'Engineer',
             icon: (
-                <img src={engineerIcon} alt="Engineer" className="w-20 h-20 object-contain" />
+                <img src={engineerIcon} alt="Engineer" className="w-28 h-28 object-contain" />
             )
         },
         {
@@ -200,8 +200,12 @@ const EnrollmentFlow = () => {
                                             : 'bg-gray-50 border-2 border-transparent hover:border-gray-300 hover:scale-105'
                                             }`}
                                     >
-                                        {goal.icon}
-                                        <span className="mt-3 text-gray-800 font-medium">{goal.label}</span>
+                                        <div className="h-32 flex items-end justify-center mb-4 w-full">
+                                            {goal.icon}
+                                        </div>
+                                        <span className="text-gray-800 font-bold text-xl">
+                                            {goal.label}
+                                        </span>
                                     </button>
                                 ))}
                             </div>

@@ -105,7 +105,7 @@ const CourseDetail = () => {
                                     <p className="text-xs text-accent font-semibold mb-3 uppercase tracking-wide">{program.subtitle}</p>
                                     <p className="text-gray-600 mb-6 leading-relaxed text-sm line-clamp-3 flex-grow">{program.description}</p>
                                     <div className="flex items-center text-base font-semibold text-gray-500 border-t border-gray-100 pt-4 mt-auto">
-                                        <svg className="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                         Target: <span className="text-gray-900 ml-2">{program.targetExam}</span>
                                     </div>
                                 </div>

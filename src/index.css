@@ -291,11 +291,11 @@ h6 {
 }
 
 .animate-scroll-left {
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 20s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scrollRight 30s linear infinite;
+  animation: scrollRight 20s linear infinite;
 }
 
 .pause-animation:hover {

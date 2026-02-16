@@ -6,7 +6,7 @@ export const coursesData = {
         fullTitle: 'IIT-JEE Preparation',
         tagline: 'Your Gateway to Premier Engineering Institutes',
         description: 'Comprehensive preparation for JEE Main and Advanced with expert faculty, proven methodology, and personalized attention to help you achieve your engineering dreams.',
-        image: '/courses/iit-jee-new.png',
+        image: '/courses/iit-jee-final.png',
         icon: (
             <svg className="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -77,19 +77,19 @@ export const coursesData = {
         faqs: [
             {
                 question: 'What is the eligibility for JEE coaching?',
-                answer: 'Students who have completed or are pursuing Class 11 and 12 with PCM (Physics, Chemistry, Mathematics) are eligible.'
+                answer: 'Students who have completed or are pursuing Class 11 and 12 with PCM (Physics, Chemistry, Mathematics) are eligible. A strong grasp of fundamental concepts from Class 9 and 10 is highly recommended for a smooth start.'
             },
             {
                 question: 'Do you provide study material?',
-                answer: 'Yes, we provide comprehensive study material including notes, practice problems, and previous year question papers.'
+                answer: 'Yes, we provide comprehensive study material including notes, practice problems, and previous year question papers. These materials are regularly updated to align with the latest JEE exam patterns and difficulty levels.'
             },
             {
                 question: 'What is the batch size?',
-                answer: 'We maintain small batch sizes of 25-30 students to ensure personalized attention.'
+                answer: 'We maintain small batch sizes of 25-30 students to ensure personalized attention and effective learning. This allows our faculty to focus on individual student weaknesses and track their progress closely.'
             },
             {
                 question: 'Are scholarships available?',
-                answer: 'Yes, we offer merit-based scholarships up to 50% for deserving students.'
+                answer: 'Yes, we offer merit-based scholarships up to 50% for deserving students based on their performance. Scholarship tests are conducted periodically to identify and reward meritorious talent.'
             }
         ],
         programs: [
@@ -124,7 +124,7 @@ export const coursesData = {
                 duration: '1 Year',
                 targetExam: 'IIT-JEE Mains and Advance',
                 icon: (
-                    <svg className="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                 )
@@ -154,7 +154,7 @@ export const coursesData = {
         fullTitle: 'NEET Preparation',
         tagline: 'Your Path to Medical Excellence',
         description: 'Complete NEET preparation with focused approach on Biology, Physics, and Chemistry. Expert faculty, comprehensive study material, and regular assessments to ensure your success.',
-        image: '/courses/neet-new.png',
+        image: '/courses/neet-final.png',
         icon: (
             <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -225,19 +225,19 @@ export const coursesData = {
         faqs: [
             {
                 question: 'What is the eligibility for NEET coaching?',
-                answer: 'Students who have completed or are pursuing Class 11 and 12 with PCB (Physics, Chemistry, Biology) are eligible.'
+                answer: 'Students who have completed or are pursuing Class 11 and 12 with PCB (Physics, Chemistry, Biology) are eligible. There is typically a minimum age requirement of 17 years by the time of admission to medical college.'
             },
             {
                 question: 'Is NCERT sufficient for NEET?',
-                answer: 'NCERT is the foundation, and we provide additional practice material and advanced concepts to ensure complete preparation.'
+                answer: 'NCERT is the foundation, and we provide additional practice material and advanced concepts to ensure complete preparation. Our curriculum integrates these resources to cover every aspect of the exam thoroughly.'
             },
             {
                 question: 'Do you provide biology lab facilities?',
-                answer: 'Yes, we have well-equipped biology labs for practical sessions and better conceptual understanding.'
+                answer: 'Yes, we have well-equipped biology labs for practical sessions and better conceptual understanding. Visualizing biological processes helps students retain complex information more effectively.'
             },
             {
                 question: 'What about counseling support?',
-                answer: 'We provide complete counseling support for college selection and admission process after NEET results.'
+                answer: 'We provide complete counseling support for college selection and admission process after NEET results. Our experts guide you through the choice-filling process to maximize your chances of securing a top seat.'
             }
         ],
         programs: [
@@ -278,7 +278,7 @@ export const coursesData = {
         fullTitle: 'Foundation Course',
         tagline: 'Building Strong Fundamentals for Future Success',
         description: 'Strong foundation building for Class 8-10 students preparing for competitive exams. Early start with concept clarity and problem-solving skills.',
-        image: '/courses/foundation-new.png',
+        image: '/courses/foundation-final.png',
         icon: (
             <svg className="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -349,19 +349,19 @@ export const coursesData = {
         faqs: [
             {
                 question: 'Why start foundation course early?',
-                answer: 'Early start helps build strong fundamentals and gives students an edge in competitive exams later.'
+                answer: 'Early start helps build strong fundamentals and gives students an edge in competitive exams later. It reduces pressure in higher classes by spreading the learning curve over a longer period.'
             },
             {
                 question: 'Is it only for competitive exams?',
-                answer: 'No, we focus on both CBSE board exams and competitive exam preparation simultaneously.'
+                answer: 'No, we focus on both CBSE board exams and competitive exam preparation simultaneously. This ensures students excel in their school academics while building a robust base for future challenges.'
             },
             {
                 question: 'Do you provide Olympiad training?',
-                answer: 'Yes, we have special sessions dedicated to Math and Science Olympiad preparation.'
+                answer: 'Yes, we have special sessions dedicated to Math and Science Olympiad preparation to identify talent. Our specialized coaching helps students develop critical thinking and problem-solving skills at a young age.'
             },
             {
                 question: 'How do you track student progress?',
-                answer: 'We conduct weekly tests, monthly evaluations, and regular parent-teacher meetings to track and discuss progress.'
+                answer: 'We conduct weekly tests, monthly evaluations, and regular parent-teacher meetings to track and discuss progress. Detailed performance reports are shared to maintain transparency and focus on improvement areas.'
             }
         ],
         programs: [
@@ -402,7 +402,7 @@ export const coursesData = {
         fullTitle: 'CUET Preparation',
         tagline: 'Your Gateway to Top Central Universities',
         description: 'Comprehensive preparation for Common University Entrance Test (CUET) with domain-specific subjects and general test preparation.',
-        image: '/courses/cuet-new.png',
+        image: '/courses/cuet-final.png',
         icon: (
             <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -475,19 +475,19 @@ export const coursesData = {
         faqs: [
             {
                 question: 'What is CUET?',
-                answer: 'CUET (Common University Entrance Test) is a national-level entrance exam for admission to central universities across India.'
+                answer: 'CUET (Common University Entrance Test) is a national-level entrance exam for admission to central universities across India. It provides a single-window opportunity for students to seek admission in participating universities.'
             },
             {
                 question: 'Which subjects should I choose?',
-                answer: 'You should choose domain subjects based on your desired course and university requirements. We provide counseling to help you decide.'
+                answer: 'You should choose domain subjects based on your desired course and university requirements. We provide personalized counseling to help you align your subject choices with your career goals and strengths.'
             },
             {
                 question: 'Do you cover all domain subjects?',
-                answer: 'Yes, we offer coaching for all major domain subjects including Science, Commerce, and Humanities streams.'
+                answer: 'Yes, we offer coaching for all major domain subjects including Science, Commerce, and Humanities streams. Our expert faculty ensures deep understanding of subject-specific concepts required for the exam.'
             },
             {
                 question: 'What about university counseling?',
-                answer: 'We provide complete guidance for university selection, course choices, and the admission process.'
+                answer: 'We provide complete guidance for university selection, course choices, and the admission process. Our team helps you navigate the counseling procedure to ensure you secure admission to the best possible institution.'
             }
         ],
         programs: [
