@@ -142,6 +142,62 @@ export const coursesData = {
                 )
             }
         ],
+        chapterPapers: [
+            {
+                subject: 'Physics',
+                description: 'Master every concept with targeted chapter-wise JEE questions from 2010–2024.',
+                chapters: [
+                    { name: 'Kinematics & Laws of Motion', downloadUrl: '#' },
+                    { name: 'Work, Energy & Power', downloadUrl: '#' },
+                    { name: 'Rotational Motion', downloadUrl: '#' },
+                    { name: 'Gravitation', downloadUrl: '#' },
+                    { name: 'Properties of Matter', downloadUrl: '#' },
+                    { name: 'Thermodynamics', downloadUrl: '#' },
+                    { name: 'Waves & Oscillations', downloadUrl: '#' },
+                    { name: 'Electrostatics', downloadUrl: '#' },
+                    { name: 'Current Electricity', downloadUrl: '#' },
+                    { name: 'Magnetism & EMI', downloadUrl: '#' },
+                    { name: 'Optics', downloadUrl: '#' },
+                    { name: 'Modern Physics', downloadUrl: '#' },
+                ]
+            },
+            {
+                subject: 'Chemistry',
+                description: 'Strengthen your chemistry fundamentals with chapter-wise solved papers from JEE Main & Advanced.',
+                chapters: [
+                    { name: 'Atomic Structure', downloadUrl: '#' },
+                    { name: 'Chemical Bonding', downloadUrl: '#' },
+                    { name: 'States of Matter', downloadUrl: '#' },
+                    { name: 'Thermodynamics', downloadUrl: '#' },
+                    { name: 'Equilibrium', downloadUrl: '#' },
+                    { name: 'Electrochemistry', downloadUrl: '#' },
+                    { name: 'Organic Chemistry Basics', downloadUrl: '#' },
+                    { name: 'Hydrocarbons', downloadUrl: '#' },
+                    { name: 'Aldehydes & Ketones', downloadUrl: '#' },
+                    { name: 'Coordination Compounds', downloadUrl: '#' },
+                    { name: 'p-Block Elements', downloadUrl: '#' },
+                    { name: 'd & f Block Elements', downloadUrl: '#' },
+                ]
+            },
+            {
+                subject: 'Mathematics',
+                description: 'Sharpen your problem-solving with chapter-wise JEE mathematics questions across all key topics.',
+                chapters: [
+                    { name: 'Sets, Relations & Functions', downloadUrl: '#' },
+                    { name: 'Complex Numbers', downloadUrl: '#' },
+                    { name: 'Quadratic Equations', downloadUrl: '#' },
+                    { name: 'Sequences & Series', downloadUrl: '#' },
+                    { name: 'Permutations & Combinations', downloadUrl: '#' },
+                    { name: 'Binomial Theorem', downloadUrl: '#' },
+                    { name: 'Matrices & Determinants', downloadUrl: '#' },
+                    { name: 'Limits, Continuity & Differentiability', downloadUrl: '#' },
+                    { name: 'Integral Calculus', downloadUrl: '#' },
+                    { name: 'Coordinate Geometry', downloadUrl: '#' },
+                    { name: 'Vectors & 3D Geometry', downloadUrl: '#' },
+                    { name: 'Probability', downloadUrl: '#' },
+                ]
+            }
+        ],
         successStories: [
             { name: 'Rahul Sharma', achievement: 'AIR 42 in JEE Advanced', year: '2024' },
             { name: 'Priya Patel', achievement: 'AIR 156 in JEE Advanced', year: '2024' },

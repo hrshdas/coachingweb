@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { getCourseBySlug, getAllCourses } from '../data/courseData.jsx';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ChapterPapersSection from '../components/ChapterPapersSection';
 
 const CourseDetail = () => {
     const { courseSlug } = useParams();
@@ -18,7 +19,7 @@ const CourseDetail = () => {
             <Navbar />
 
             {/* Breadcrumb */}
-            <div className="bg-white border-b border-gray-100 pt-24 pb-4">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 pt-24 pb-4 border-b border-blue-100">
                 <div className="max-w-7xl mx-auto px-6">
                     <nav className="flex items-center space-x-2 text-sm text-gray-500">
                         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
@@ -31,7 +32,7 @@ const CourseDetail = () => {
             </div>
 
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-blue-50 to-white py-16 md:py-24 relative overflow-hidden">
+            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="md:w-1/2 space-y-6">
@@ -44,7 +45,7 @@ const CourseDetail = () => {
                             </p>
 
                             <div className="flex flex-wrap items-center gap-4 pt-6">
-                                <a href="tel:+919999345093" className="px-8 py-4 bg-gray-200 hover:bg-gray-300 text-gray-900 font-bold rounded-lg transition-all shadow-sm hover:shadow-md">
+                                <a href="tel:+919999345093" className="px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-sm hover:shadow-md">
                                     Call Now
                                 </a>
                                 <button className="text-primary font-bold hover:text-accent px-4 text-lg transition-colors underline decoration-2 decoration-transparent hover:decoration-accent underline-offset-4">
@@ -113,6 +114,11 @@ const CourseDetail = () => {
                         </div>
                     </div>
                 </section>
+            )}
+
+            {/* Chapter-wise Previous Year Papers */}
+            {course.chapterPapers && (
+                <ChapterPapersSection chapterPapers={course.chapterPapers} />
             )}
 
             {/* FAQ Section */}
